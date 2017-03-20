@@ -9,7 +9,11 @@ import UIKit
 
 struct Card {
     
+    var number = 0
+    
     var name = ""
+    
+    var color = cardColor.white
     
     var art = ""
     
@@ -17,7 +21,9 @@ struct Card {
     
     var subType = ""
     
-    var expansionSymbol = ""
+    var rarity = cardRarity.common
+    
+    var set = cardSet.m13
     
     var keyword = ""
     
@@ -35,11 +41,28 @@ struct Card {
     
     var isTapped = false
 
-    init(inputName: String, inputArt: String, inputType: cardType, inputSubType: String, inputExpansionSymbol: String,
-         inputKeyword: String, inputReminderText: String, inputFlavorText: String, inputArtistCredit: String, inputManaCost: Int,
-         inputPower: Int, inputToughness: Int, inputIsTapped: Bool) {
+    init(inputNumber: Int,
+        inputName: String,
+         inputColor: cardColor,
+         inputArt: String,
+         inputType: cardType,
+         inputSubType: String,
+         inputRarity: cardRarity,
+         inputSet: cardSet,
+         inputKeyword: String,
+         inputReminderText: String,
+         inputFlavorText: String,
+         inputArtistCredit: String,
+         inputManaCost: Int,
+         inputPower: Int,
+         inputToughness: Int,
+         inputIsTapped: Bool) {
+        
+        number = inputNumber
         
         name = inputName
+        
+        color = inputColor
         
         art = inputArt
         
@@ -47,7 +70,7 @@ struct Card {
         
         subType = inputSubType
         
-        expansionSymbol = inputExpansionSymbol
+        rarity = inputRarity
         
         keyword = inputKeyword
         
@@ -70,14 +93,38 @@ struct Card {
 }
 
 enum cardType {
+    
     case land
     case creature
     case artifact
     case equipment
     case enchantment
-    case planeswalked
+    case planeswalker
     case sorcery
     case instant
+}
+
+enum cardColor {
+    
+    case white
+    case green
+    case red
+    case blue
+    case black
+}
+
+enum cardRarity {
+    
+    case mythicRare
+    case timeshifted
+    case rare
+    case common
+    case uncommon
+}
+
+enum cardSet {
+    
+    case m13
 }
 
 // Initialize game state
@@ -103,12 +150,16 @@ var library = [Card]()
 var battleField = [Card]()
 
 // Initialize cards
+// source: http://www.magicspoiler.com/m13-magic-2013-card-list/
 
-var card001 = Card.init(inputName: "",
+var card001 = Card.init(inputNumber: 1,
+                        inputName: "Ajani, Caller of the Pride",
+                        inputColor: cardColor.white,
                         inputArt: "",
-                        inputType: cardType.land,
-                        inputSubType: "",
-                        inputExpansionSymbol: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
                         inputKeyword: "",
                         inputReminderText: "",
                         inputFlavorText: "",
@@ -118,13 +169,21 @@ var card001 = Card.init(inputName: "",
                         inputToughness: 0,
                         inputIsTapped: false)
 
+// Adds cards to deck
+
+var deck = [Card]()
+
+deck.append(card001)
+
 // Verifies initialization
 
+card001.number
 card001.name
 card001.art
 card001.type
 card001.subType
-card001.expansionSymbol
+card001.rarity
+card001.set
 card001.keyword
 card001.reminderText
 card001.flavorText
