@@ -169,29 +169,467 @@ var card001 = Card.init(inputNumber: 1,
                         inputToughness: 0,
                         inputIsTapped: false)
 
+var card002 = Card.init(inputNumber: 2,
+                        inputName: "Ajani’s Sunstriker",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card003 = Card.init(inputNumber: 3,
+                        inputName: "Angel’s Mercy",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card004 = Card.init(inputNumber: 4,
+                        inputName: "Angelic Benediction",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card005 = Card.init(inputNumber: 5,
+                        inputName: "Attended Knight",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card006 = Card.init(inputNumber: 6,
+                        inputName: "Aven Squire",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card007 = Card.init(inputNumber: 7,
+                        inputName: "Battleflight Eagle",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card008 = Card.init(inputNumber: 8,
+                        inputName: "Captain of the Watch",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card009 = Card.init(inputNumber: 9,
+                        inputName: "Captain’s Call",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card010 = Card.init(inputNumber: 10,
+                        inputName: "Crusader of Odric",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card011 = Card.init(inputNumber: 11,
+                        inputName: "Divine Favor",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card012 = Card.init(inputNumber: 12,
+                        inputName: "Divine Verdict",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card013 = Card.init(inputNumber: 13,
+                        inputName: "Erase",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card014 = Card.init(inputNumber: 14,
+                        inputName: "Faith’s Reward",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card015 = Card.init(inputNumber: 15,
+                        inputName: "Glorious Charge",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card016 = Card.init(inputNumber: 16,
+                        inputName: "Griffin Protector",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card017 = Card.init(inputNumber: 17,
+                        inputName: "Guardian Lions",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card018 = Card.init(inputNumber: 18,
+                        inputName: "Guardians of Akrasa",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card019 = Card.init(inputNumber: 19,
+                        inputName: "Healer of the Pride",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card020 = Card.init(inputNumber: 20,
+                        inputName: "Intrepid Hero",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card021 = Card.init(inputNumber: 21,
+                        inputName: "Knight of Glory",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card022 = Card.init(inputNumber: 22,
+                        inputName: "Oblivion Ring",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card023 = Card.init(inputNumber: 23,
+                        inputName: "Odric, Master Tactician",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
+var card024 = Card.init(inputNumber: 24,
+                        inputName: "Pacifism",
+                        inputColor: cardColor.white,
+                        inputArt: "",
+                        inputType: cardType.planeswalker,
+                        inputSubType: "Ajani",
+                        inputRarity: cardRarity.mythicRare,
+                        inputSet: cardSet.m13,
+                        inputKeyword: "",
+                        inputReminderText: "",
+                        inputFlavorText: "",
+                        inputArtistCredit: "",
+                        inputManaCost: 0,
+                        inputPower: 0,
+                        inputToughness: 0,
+                        inputIsTapped: false)
+
 // Adds cards to deck
 
 var deck = [Card]()
 
 deck.append(card001)
+deck.append(card002)
+deck.append(card003)
+deck.append(card004)
+deck.append(card005)
+deck.append(card006)
+deck.append(card007)
+deck.append(card008)
+deck.append(card009)
+deck.append(card010)
+deck.append(card011)
+deck.append(card012)
+deck.append(card013)
+deck.append(card014)
+deck.append(card015)
+deck.append(card016)
+deck.append(card017)
+deck.append(card018)
+deck.append(card019)
+deck.append(card020)
+deck.append(card021)
+deck.append(card022)
+deck.append(card023)
+deck.append(card024)
+deck.append(card025)
 
-// Verifies initialization
 
-card001.number
-card001.name
-card001.art
-card001.type
-card001.subType
-card001.rarity
-card001.set
-card001.keyword
-card001.reminderText
-card001.flavorText
-card001.artistCredit
-card001.manaCost
-card001.power
-card001.toughness
-card001.isTapped
+// Verifies initialization of input card by printing out its attributes
+//
+// :param: Card
+//
+// :return: Nothing
+func printCardAttributes(inputCard: Card) {
+    
+    print(inputCard.number)
+    
+    print(inputCard.name)
+    
+    print(inputCard.art)
+    
+    print(inputCard.type)
+    
+    print(inputCard.subType)
+    
+    print(inputCard.rarity)
+    
+    print(inputCard.set)
+    
+    print(inputCard.keyword)
+    
+    print(inputCard.reminderText)
+    
+    print(inputCard.flavorText)
+    
+    print(inputCard.artistCredit)
+    
+    print(inputCard.manaCost)
+    
+    print(inputCard.power)
+    
+    print(inputCard.toughness)
+    
+    print(inputCard.isTapped)
+}
+
+printCardAttributes(inputCard: card001)
 
 
 
