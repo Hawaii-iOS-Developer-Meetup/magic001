@@ -42,7 +42,7 @@ struct Card {
     var isTapped = false
 
     init(inputNumber: Int,
-        inputName: String,
+         inputName: String,
          inputColor: cardColor,
          inputArt: String,
          inputType: cardType,
@@ -133,7 +133,7 @@ var playerOneHealth = 20
 
 var playerTwoHealth = 20
 
-var currentActivePlayer = 1
+var isPlayerOnesTurn = true
 
 // Creates hands for each player's cards
 
@@ -141,7 +141,7 @@ var player001Hand = [Card]()
 
 var player002Hand = [Card]()
 
-// Creates areas of the game board
+// Creates areas of the game board where cards will be held
 
 var graveYard = [Card]()
 
@@ -149,7 +149,7 @@ var library = [Card]()
 
 var battleField = [Card]()
 
-// Initialize cards
+// Initialize cards with magic
 // source: http://www.magicspoiler.com/m13-magic-2013-card-list/
 
 var card001 = Card.init(inputNumber: 1,
@@ -588,7 +588,6 @@ deck.append(card021)
 deck.append(card022)
 deck.append(card023)
 deck.append(card024)
-deck.append(card025)
 
 
 // Verifies initialization of input card by printing out its attributes
@@ -629,7 +628,28 @@ func printCardAttributes(inputCard: Card) {
     print(inputCard.isTapped)
 }
 
-printCardAttributes(inputCard: card001)
+// Prints out the entire deck
+//for card in deck {
+//    
+//    printCardAttributes(inputCard: card)
+//}
+
+func getRandomCardFrom(inputDeck: [Card]) -> Card {
+    
+    var returnCard: Card
+    
+    var randomInt = arc4random_uniform(UInt32(inputDeck.count))
+    
+    returnCard = inputDeck[Int(randomInt)]
+    
+    return returnCard
+}
+
+// Get a random card from the deck and print out its attributes
+
+printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
+
+
 
 
 
