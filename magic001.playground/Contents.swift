@@ -590,41 +590,10 @@ var card024 = Card.init(inputNumber: 24,
                         inputToughness: 0,
                         inputIsTapped: false)
 
-// Adds cards to deck
-
-var deck = [Card]()
-
-deck.append(card001)
-deck.append(card002)
-deck.append(card003)
-deck.append(card004)
-deck.append(card005)
-deck.append(card006)
-deck.append(card007)
-deck.append(card008)
-deck.append(card009)
-deck.append(card010)
-deck.append(card011)
-deck.append(card012)
-deck.append(card013)
-deck.append(card014)
-deck.append(card015)
-deck.append(card016)
-deck.append(card017)
-deck.append(card018)
-deck.append(card019)
-deck.append(card020)
-deck.append(card021)
-deck.append(card022)
-deck.append(card023)
-deck.append(card024)
-
+//MARK: C A R D   M E T H O D S
 
 // Verifies initialization of input card by printing out its attributes
-//
-// :param: Card
-//
-// :return: Nothing
+
 func printCardAttributes(inputCard: Card) {
     
     print(inputCard.number)
@@ -658,7 +627,40 @@ func printCardAttributes(inputCard: Card) {
     print(inputCard.isTapped)
 }
 
-// Methods that manipulate the Deck of Cards
+//MARK: - D E C K
+
+// Adds cards to deck
+
+var deck = [Card]()
+
+deck.append(card001)
+deck.append(card002)
+deck.append(card003)
+deck.append(card004)
+deck.append(card005)
+deck.append(card006)
+deck.append(card007)
+deck.append(card008)
+deck.append(card009)
+deck.append(card010)
+deck.append(card011)
+deck.append(card012)
+deck.append(card013)
+deck.append(card014)
+deck.append(card015)
+deck.append(card016)
+deck.append(card017)
+deck.append(card018)
+deck.append(card019)
+deck.append(card020)
+deck.append(card021)
+deck.append(card022)
+deck.append(card023)
+deck.append(card024)
+
+//MARK: - D E C K   M E T H O D S
+
+// Gets a random card from the deck
 
 func getRandomCardFrom(inputDeck: [Card]) -> Card {
     
@@ -671,7 +673,7 @@ func getRandomCardFrom(inputDeck: [Card]) -> Card {
     return returnCard
 }
 
-// Get a random card from the deck and print out its attributes
+// Gets a random card from the deck and prints out its attributes
 
 printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
 
@@ -710,6 +712,8 @@ var isPlayerOnesTurn = true
 var player001Hand = [Card]()
 
 var player002Hand = [Card]()
+
+//MARK: - P L A Y   S P A C E
 
 // Creates areas of player one's play space
 
