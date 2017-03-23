@@ -1,11 +1,52 @@
+/*
+ ####                                              ####
+ ####                                              ####
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ ####                                      #####
+ ####                                        #####
+ #####
+ #####
+ ####                                         #######
+ ####                                        #########
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ #####################################################
+ ####################################################
+ ###################################################
+ ################################################
+ ####                                      #####
+ ####                                        #####
+ #####
+ #####
+ ####                                         #######
+ ####                                        #########
+ ######################################################
+ ######################################################
+ ######################################################
+ ######################################################
+ #####################################################
+ ####################################################
+ ###################################################
+ ################################################
+ ####
+ ####
+ */
 
 
-
-//: Magic The Gathering - Creates computer simulation of card game
+//: Magic The Gathering - Creates simulation of card game
 
 import UIKit
 
-// Creates card attributes in struct
+// Creates card attributes in struct called Card
 
 struct Card {
     
@@ -40,6 +81,8 @@ struct Card {
     var toughness = 0
     
     var isTapped = false
+    
+    // Creates initializer for a Card so setting its attributes is easier
 
     init(inputNumber: Int,
          inputName: String,
@@ -92,6 +135,8 @@ struct Card {
     }
 }
 
+// Enumerates the types of magic cards allowed
+
 enum cardType {
     
     case land
@@ -104,6 +149,8 @@ enum cardType {
     case instant
 }
 
+// Enumerates the colors of magic cards allowed
+
 enum cardColor {
     
     case white
@@ -112,6 +159,8 @@ enum cardColor {
     case blue
     case black
 }
+
+// Enumerates the rarity of these Cards
 
 enum cardRarity {
     
@@ -122,12 +171,32 @@ enum cardRarity {
     case uncommon
 }
 
+// Enumerates the set of Cards
+
 enum cardSet {
     
     case m13
 }
 
-// Initialize game state
+// Keeps track of turns
+// source: https://en.wikipedia.org/wiki/Magic:_The_Gathering_rules
+
+// Enumerates the parts of a Turn
+
+enum Turn {
+    
+    case BeginningPhase
+    case FirstMainPhase
+    case CombatPhase
+    case BeginningOfCombat
+    case DeclareAttackers
+    case DeclareBlockers
+    case EndOfCombat
+    case SecondMainPhase
+    case EndingPhase
+}
+
+// Initializes pieces to keep track of game state and enforce game rules
 
 var playerOneHealth = 20
 
@@ -141,13 +210,19 @@ var player001Hand = [Card]()
 
 var player002Hand = [Card]()
 
-// Creates areas of the game board where cards will be held
+// Creates areas of the play space
 
 var graveYard = [Card]()
 
 var library = [Card]()
 
 var battleField = [Card]()
+
+var theStack = [Card]()
+
+var exile = [Card]()
+
+var command = [Card]()
 
 // Initialize cards with magic
 // source: http://www.magicspoiler.com/m13-magic-2013-card-list/
