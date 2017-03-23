@@ -615,11 +615,6 @@ func printCardAttributes(inputCard: Card) {
     print(inputCard.isTapped)
 }
 
-func printCardName(inputCard: Card) {
-    
-    print(inputCard.name)
-}
-
 //MARK: - D E C K
 
 // Adds cards to deck
@@ -664,6 +659,23 @@ func getRandomCardFrom(inputDeck: [Card]) -> Card {
     returnCard = inputDeck[Int(randomInt)]
     
     return returnCard
+}
+
+// Shuffle the Deck
+// source: http://stackoverflow.com/questions/24026510/how-do-i-shuffle-an-array-in-swift
+extension MutableCollection where Indices.Iterator.Element == Index {
+    /// Shuffles the contents of this collection.
+    mutating func shuffle() {
+        let c = count
+        guard c > 1 else { return }
+        
+        for (firstUnshuffled , unshuffledCount) in zip(indices, stride(from: c, to: 1, by: -1)) {
+            let d: IndexDistance = numericCast(arc4random_uniform(numericCast(unshuffledCount)))
+            guard d != 0 else { continue }
+            let i = index(firstUnshuffled, offsetBy: d)
+            swap(&self[firstUnshuffled], &self[i])
+        }
+    }
 }
 
 // MARK: - T U R N
@@ -739,11 +751,32 @@ var command002 = [Card]()
 
 print("Tonight's Match: ")
 print("- - - - - - - - - - - - -")
+print("shuffling deck...")
+deck.shuffle()
+print("player one selects 7 cards from his deck...")
+deck.shuffle()
+print("player two selects 7 cards from his deck...")
+deck.shuffle()
 print("")
-printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
-print("(\(playerOne.mana) Mana)")
+print("player one: \(playerOne.name)")
+print("")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
 print("")
 print("VS.")
 print("")
-printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
-print("(\(playerTwo.mana) Mana)")
+print("player 2: \(playerTwo.name)")
+print("")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("\(getRandomCardFrom(inputDeck: deck).name) (\(playerOne.mana) Mana)")
+print("")
