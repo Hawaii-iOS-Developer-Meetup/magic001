@@ -1,37 +1,4 @@
 /*
- ####                                              ####
- ####                                              ####
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- ####                                      #####
- ####                                        #####
- #####
- #####
- ####                                         #######
- ####                                        #########
- ######################################################
- ######################################################
- ######################################################
- ######################################################
- #####################################################
- ####################################################
- ###################################################
- ################################################
- ####                                      #####
- ####                                        #####
- #####
- #####
- ####                                         #######
- ####                                        #########
- ######################################################
- ######################################################
- ######################################################
  ######################################################
  #####################################################
  ####################################################
@@ -44,6 +11,27 @@
 //: Magic The Gathering - Creates simulation of card game
 
 import UIKit
+
+//MARK: - P L A Y E R
+
+struct Player {
+    
+    var name = ""
+    
+    var mana = 0
+    
+    var health = 20
+    
+    init(inputName: String, inputMana: Int, inputHealth: Int) {
+        
+        name = inputName
+        
+        mana = inputMana
+        
+        health = inputHealth
+    }
+ 
+}
 
 //MARK: - C A R D
 
@@ -627,6 +615,11 @@ func printCardAttributes(inputCard: Card) {
     print(inputCard.isTapped)
 }
 
+func printCardName(inputCard: Card) {
+    
+    print(inputCard.name)
+}
+
 //MARK: - D E C K
 
 // Adds cards to deck
@@ -673,10 +666,6 @@ func getRandomCardFrom(inputDeck: [Card]) -> Card {
     return returnCard
 }
 
-// Gets a random card from the deck and prints out its attributes
-
-printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
-
 // MARK: - T U R N
 
 // Keeps track of the Turn
@@ -701,9 +690,9 @@ enum Turn {
 
 // Initializes pieces to keep track of game state and enforce game rules
 
-var playerOneHealth = 20
+let playerOne = Player.init(inputName: "Gagic", inputMana: 0, inputHealth: 20)
 
-var playerTwoHealth = 20
+let playerTwo = Player.init(inputName: "Mathering", inputMana: 0, inputHealth: 20)
 
 var isPlayerOnesTurn = true
 
@@ -742,3 +731,18 @@ var theStack002 = [Card]()
 var exile002 = [Card]()
 
 var command002 = [Card]()
+
+//MARK: - P L A Y 
+
+// Gets a random card from the deck and prints out its attributes
+//printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
+
+print("Tonight's Match: ")
+print("- - - - - - - - - - - - -")
+printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
+print("\(playerOne.mana) - Mana")
+print("")
+print("VS.")
+print("")
+printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
+print("\(playerTwo.mana) - Mana")
