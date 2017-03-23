@@ -1,8 +1,8 @@
 /*
  ######################################################
- #####################################################
- ####################################################
- ###################################################
+ #####M####################G##########################
+ ############A########################I##############
+ ############################################C######
  ################################################
  ####
  ####
@@ -739,10 +739,11 @@ var command002 = [Card]()
 
 print("Tonight's Match: ")
 print("- - - - - - - - - - - - -")
+print("")
 printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
-print("\(playerOne.mana) - Mana")
+print("(\(playerOne.mana) Mana)")
 print("")
 print("VS.")
 print("")
 printCardName(inputCard: getRandomCardFrom(inputDeck: deck))
-print("\(playerTwo.mana) - Mana")
+print("(\(playerTwo.mana) Mana)")
