@@ -41,12 +41,56 @@
  ####
  */
 
-
 //: Magic The Gathering - Creates simulation of card game
 
 import UIKit
 
-// Creates card attributes in struct called Card
+//MARK: - C A R D
+
+// Enumerates the types of Cards allowed
+
+enum cardType {
+    
+    case land
+    case creature
+    case artifact
+    case equipment
+    case enchantment
+    case planeswalker
+    case sorcery
+    case instant
+}
+
+// Enumerates the colors of Cards allowed
+
+enum cardColor {
+    
+    case white
+    case green
+    case red
+    case blue
+    case black
+}
+
+// Enumerates the rarity of each Card
+
+enum cardRarity {
+    
+    case mythicRare
+    case timeshifted
+    case rare
+    case common
+    case uncommon
+}
+
+// Enumerates the set these Cards come from
+
+enum cardSet {
+    
+    case m13
+}
+
+// Creates a Card's attributes in a struct called Card
 
 struct Card {
     
@@ -135,96 +179,7 @@ struct Card {
     }
 }
 
-// Enumerates the types of magic cards allowed
-
-enum cardType {
-    
-    case land
-    case creature
-    case artifact
-    case equipment
-    case enchantment
-    case planeswalker
-    case sorcery
-    case instant
-}
-
-// Enumerates the colors of magic cards allowed
-
-enum cardColor {
-    
-    case white
-    case green
-    case red
-    case blue
-    case black
-}
-
-// Enumerates the rarity of these Cards
-
-enum cardRarity {
-    
-    case mythicRare
-    case timeshifted
-    case rare
-    case common
-    case uncommon
-}
-
-// Enumerates the set of Cards
-
-enum cardSet {
-    
-    case m13
-}
-
-// Keeps track of turns
-// source: https://en.wikipedia.org/wiki/Magic:_The_Gathering_rules
-
-// Enumerates the parts of a Turn
-
-enum Turn {
-    
-    case BeginningPhase
-    case FirstMainPhase
-    case CombatPhase
-    case BeginningOfCombat
-    case DeclareAttackers
-    case DeclareBlockers
-    case EndOfCombat
-    case SecondMainPhase
-    case EndingPhase
-}
-
-// Initializes pieces to keep track of game state and enforce game rules
-
-var playerOneHealth = 20
-
-var playerTwoHealth = 20
-
-var isPlayerOnesTurn = true
-
-// Creates hands for each player's cards
-
-var player001Hand = [Card]()
-
-var player002Hand = [Card]()
-
-// Creates areas of the play space
-
-var graveYard = [Card]()
-
-var library = [Card]()
-
-var battleField = [Card]()
-
-var theStack = [Card]()
-
-var exile = [Card]()
-
-var command = [Card]()
-
-// Initialize cards with magic
+// Initialize Cards from Core Set 2013
 // source: http://www.magicspoiler.com/m13-magic-2013-card-list/
 
 var card001 = Card.init(inputNumber: 1,
@@ -703,11 +658,7 @@ func printCardAttributes(inputCard: Card) {
     print(inputCard.isTapped)
 }
 
-// Prints out the entire deck
-//for card in deck {
-//    
-//    printCardAttributes(inputCard: card)
-//}
+// Methods that manipulate the Deck of Cards
 
 func getRandomCardFrom(inputDeck: [Card]) -> Card {
     
@@ -724,35 +675,66 @@ func getRandomCardFrom(inputDeck: [Card]) -> Card {
 
 printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
 
+// MARK: - T U R N
 
+// Keeps track of the Turn
+// source: https://en.wikipedia.org/wiki/Magic:_The_Gathering_rules
 
+// Enumerates the parts of a Turn
 
+enum Turn {
+    
+    case BeginningPhase
+    case FirstMainPhase
+    case CombatPhase
+    case BeginningOfCombat
+    case DeclareAttackers
+    case DeclareBlockers
+    case EndOfCombat
+    case SecondMainPhase
+    case EndingPhase
+}
 
+//MARK: - G A M E   S T A T E
 
+// Initializes pieces to keep track of game state and enforce game rules
 
+var playerOneHealth = 20
 
+var playerTwoHealth = 20
 
+var isPlayerOnesTurn = true
 
+// Creates hands for each player's cards
 
+var player001Hand = [Card]()
 
+var player002Hand = [Card]()
 
+// Creates areas of player one's play space
 
+var graveYard001 = [Card]()
 
+var library001 = [Card]()
 
+var battleField001 = [Card]()
 
+var theStack001 = [Card]()
 
+var exile001 = [Card]()
 
+var command001 = [Card]()
 
+// Creates areas of the player two's play space
 
+var graveYard002 = [Card]()
 
+var library002 = [Card]()
 
+var battleField002 = [Card]()
 
+var theStack002 = [Card]()
 
+var exile002 = [Card]()
 
-
-
-
-
-
-
-
+var command002 = [Card]()
