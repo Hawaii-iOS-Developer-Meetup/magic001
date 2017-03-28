@@ -22,6 +22,8 @@ struct Player {
     
     var health = 20
     
+    var dieRoll = 0
+    
     init(inputName: String, inputMana: Int, inputHealth: Int) {
         
         name = inputName
@@ -702,9 +704,9 @@ enum Turn {
 
 // Initializes pieces to keep track of game state and enforce game rules
 
-let playerOne = Player.init(inputName: "Gagic", inputMana: 0, inputHealth: 20)
+var playerOne = Player.init(inputName: "Gagic", inputMana: 0, inputHealth: 20)
 
-let playerTwo = Player.init(inputName: "Mathering", inputMana: 0, inputHealth: 20)
+var playerTwo = Player.init(inputName: "Mathering", inputMana: 0, inputHealth: 20)
 
 var isPlayerOnesTurn = true
 
@@ -746,37 +748,86 @@ var command002 = [Card]()
 
 //MARK: - P L A Y 
 
+func rollDice(_ inputNumberOfSides: Int) -> Int {
+    
+    var returnInt = Int(arc4random_uniform(UInt32(inputNumberOfSides)))
+    
+    return returnInt
+}
+
+func getWinnerFrom(playerOneRoll: Int, playerTwoRoll: Int) -> String {
+    
+    var returnString = ""
+    
+    if playerOneRoll > playerTwoRoll {
+        
+        returnString = "playerOne"
+        
+    } else if (playerOneRoll == playerTwoRoll) {
+        
+        returnString = "TIE"
+        
+    } else {
+        
+        returnString = "playerTwo"
+    }
+    
+    return returnString
+}
+
 // Gets a random card from the deck and prints out its attributes
 //printCardAttributes(inputCard: getRandomCardFrom(inputDeck: deck))
 
 print("Tonight's Match: ")
 print("- - - - - - - - - - - - -")
-print("shuffling deck...")
+print("Player one rolls the dice and gets a...")
+playerOne.dieRoll = rollDice(12)
+print(playerOne.dieRoll)
+print("Player two rolls the dice and gets a...")
+playerTwo.dieRoll = rollDice(12)
+print(playerTwo.dieRoll)
+print("Winning Player from dice roll is:")
+print(getWinnerFrom(playerOneRoll: playerOne.dieRoll, playerTwoRoll: playerTwo.dieRoll))
+print("player one shuffles player two's deck...")
+deck.shuffle()
+print("player two shuffles player one's deck...")
 deck.shuffle()
 print("player one selects 7 cards from his deck...")
-deck.shuffle()
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
+player001Hand.append(getRandomCardFrom(inputDeck: deck))
 print("player two selects 7 cards from his deck...")
-deck.shuffle()
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
+player002Hand.append(getRandomCardFrom(inputDeck: deck))
 print("")
 print("player one: \(playerOne.name) (\(playerOne.mana) Mana)")
 print("")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
+print("\(player001Hand[0].name)")
+print("\(player001Hand[1].name)")
+print("\(player001Hand[2].name)")
+print("\(player001Hand[3].name)")
+print("\(player001Hand[4].name)")
+print("\(player001Hand[5].name)")
+print("\(player001Hand[6].name)")
 print("")
 print("VS.")
 print("")
 print("player 2: \(playerTwo.name) (\(playerTwo.mana) Mana)")
 print("")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
-print("\(getRandomCardFrom(inputDeck: deck).name)")
+print("\(player002Hand[0].name)")
+print("\(player002Hand[1].name)")
+print("\(player002Hand[2].name)")
+print("\(player002Hand[3].name)")
+print("\(player002Hand[4].name)")
+print("\(player002Hand[5].name)")
+print("\(player002Hand[6].name)")
 print("")
